@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import requests
 
 # Bot token and TMDb API key
-BOT_TOKEN = "5995472653:AAGCCtCdurJQMOw9Z8DJCFQZG0u2Xg737vY"
+BOT_TOKEN = "7642007079:AAE8XsM__cqvlwoE_OI9kSpf9S1dGaUGdwE"
 TMDB_API_KEY = "bb5f40c5be4b24660cbdc20c2409835e"
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
@@ -28,7 +28,7 @@ def search_movie(query):
         return data.get("results", [])
     return []
 
-# Message	handler for movie search
+# Message handler for movie search
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.message.text
     results = search_movie(query)
